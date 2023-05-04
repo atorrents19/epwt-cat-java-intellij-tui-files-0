@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/epwt-cat-java-intellij-tui-files-0.iml" filepath="$PROJECT_DIR$/.idea/epwt-cat-java-intellij-tui-files-0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/files_example0/files_example0.iml" filepath="$PROJECT_DIR$/files_example0/files_example0.iml" />
+      <module fileurl="file://$PROJECT_DIR$/files_exemple1/files_exemple1.iml" filepath="$PROJECT_DIR$/files_exemple1/files_exemple1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/files_lliurament/files_lliurament.iml" filepath="$PROJECT_DIR$/files_lliurament/files_lliurament.iml" />
+      <module fileurl="file://$PROJECT_DIR$/files_lliurament2/files_lliurament2.iml" filepath="$PROJECT_DIR$/files_lliurament2/files_lliurament2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/students/students.iml" filepath="$PROJECT_DIR$/students/students.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tui_lliurament/tui_lliurament.iml" filepath="$PROJECT_DIR$/tui_lliurament/tui_lliurament.iml" />
+    </modules>
+  </component>
+</project>

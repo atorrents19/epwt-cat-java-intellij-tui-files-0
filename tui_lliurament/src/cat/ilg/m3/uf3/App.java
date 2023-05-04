@@ -8,7 +8,7 @@ public class App {
     public static void main(String[] args) {
 
         //Creem l'array d'estudiants:
-        Student students[] = init();
+        Student students[] = initTui();
         //TODO Heu de canviar la crida a init() per la crida a initTui()
         //Student [] students = ... //TODO
 
@@ -46,38 +46,49 @@ public class App {
         Student students[] = new Student[0];
 
         //Ara, hem de preguntar quants estudiants volem tenir
-        //Scanner in = ...
-
+        Scanner in = new Scanner(System.in);
         System.out.print("Number of students: ");
-        //TODO
+        String numberOfStudentsStr = in.nextLine().trim();
+        int numberOfStudents = stringToInt(numberOfStudentsStr);
+        System.out.println("Number of students is: " + numberOfStudents);
 
-        //System.out.println("Number of students is: " + //TODO );
 
-        //int numberOfStudents = stringToInt(numberOfStudentsStr);
+
 
         //Si el número d'estudiants és més gran que 0
         //preguntarem el nom, edat i subjects de cada estudiant
-        //if(numberOfStudents > 0) {
+        if(numberOfStudents > 0) {
 
-//            students = new Student[numberOfStudents];
-//            Student newStudent;
+              students = new Student[numberOfStudents];
 
-//            for(int i = 0; i < numberOfStudents; i++){
+              for(int i = 0; i < numberOfStudents; i++){
 
-              //TODO - Anar preguntant els valors (name, age,...) per a cada estudiant
+                  Student newStudent = new Student();
+
+                  //NOMBRE DEL ESTUDIANTE
+                   System.out.println("Escribe tu nombre:");
+                   newStudent.name = in.nextLine();
+
+                  //EDAD DEL ESTUDIANTE
+                  System.out.println("Escribe tu edad:");
+                  newStudent.age = stringToInt(in.nextLine());
+
+                  //ASIGNATURAS A LAS QUE TE HAS INSCRITO
+                  System.out.println("Escribe el numero de asignaturas a las que te has incrito:");
+                  newStudent.amountOfEnrolledSubjects = stringToInt(in.nextLine());
 
                 //Fiquem l'estudiant a l'array
-                //students[i] = newStudent;
-            //}
-        //}
-        //in.close();
+                students[i] = newStudent;
+              }
+        }
+        in.close();
         return students;
     }
 
 
 
     //Mètode que genera un array d'estudiants
-    static public Student[] init() {
+  /*  static public Student[] init() {
 
         Student students[] = new Student[10];
 
@@ -141,7 +152,7 @@ public class App {
         s9.amountOfEnrolledSubjects = 3;
         students[9] = s9;
 
-        return students;
+        return students; **/
     }
-}
+
 

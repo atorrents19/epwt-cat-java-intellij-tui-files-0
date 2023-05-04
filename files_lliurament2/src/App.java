@@ -6,26 +6,36 @@ public class App {
 
     public static void main(String[] args) throws Exception {
 
-        //TODO Crear un fitxer amb la classe File
+        File fichero = new File("testfile.html");
         //el nom del fitxer serà testfile.html
 
 
         String str = urlReader("http://inslaguineueta.cat");
 
-        //TODO cridar la funció perquè guardi str al fitxer
+        saveToFile(str, fichero, true);
 
 
-        //TODO LLegir el contingut del fitxer i imprimir-lo
+        System.out.println(readFromFile(fichero));
         //per pantalla.
     }
 
     static String readFromFile(File file) throws IOException {
-        //TODO usant FileReader i BufferedReader
+        FileReader filereader = new FileReader(file);
+        BufferedReader bufferedReader = new BufferedReader(filereader);
+        StringBuilder stringbuilder = new StringBuilder();
+        String linia;
+        while((linia = bufferedReader.readLine()) != null){
+            stringbuilder.append(linia);
+        }
+        bufferedReader.close();
+        return stringbuilder.toString();
     }
 
-    static void saveToFile(String str, File file, boolean append)
-            throws IOException {
-        //TODO usant FileWriter i BufferedWriter
+    static void saveToFile(String str, File file, boolean append) throws IOException {
+        FileWriter filewriter = new FileWriter(file, true);
+        BufferedWriter bufferedwriter = new BufferedWriter(filewriter);
+        bufferedwriter.write(str);
+        bufferedwriter.close();
     }
 
     public static String urlReader(String url) throws Exception {
